@@ -104,6 +104,7 @@ export const TABLES: { [id: string]: { [name: string]: AnyField } } = {
   },
   notebooks: {
     content_id: Fields.String(),
+    session_id: Fields.Register<null | string>({value: null}),
     nbformat: Fields.Number(),
     nbformatMinor: Fields.Number(),
     cells: Fields.List<string>(),
